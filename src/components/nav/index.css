@@ -1,0 +1,25 @@
+.nav_header{
+  display: flex;
+  background: #fff;
+  align-items: center;
+}
+.nav_logo{
+  flex: 1;
+  text-align: center;
+}
+.nav_brief{
+  flex:1;
+}
+.nav_brief h2{
+  color:skyblue;
+}
+.nav_logo a{
+  width: 100px;
+}
+.nav_logo a img{
+  width:80px;
+  border-radius: 30%;
+}
+.nav_menu{
+  flex:2;
+}

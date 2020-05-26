@@ -1,0 +1,9 @@
+.list_wid{
+  width: 60vw;
+}
+.ant-list-item-action {
+  margin-top:0!important;
+  background: #fff;
+  box-sizing: border-box;
+  padding-left: 20px!important;
+}
