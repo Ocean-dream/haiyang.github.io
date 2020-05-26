@@ -1,6 +1,7 @@
 import React, { } from 'react'
 import './index.css'
 import { Menu } from 'antd';
+import { Link } from 'react-router-dom';
 import { RobotOutlined, ConsoleSqlOutlined, CarOutlined, DeploymentUnitOutlined,HomeOutlined } from '@ant-design/icons';
 
 const { SubMenu } = Menu;
@@ -21,7 +22,14 @@ function Nav() {
       <div className="nav_menu">
       <Menu onClick={handleClick} selectedKeys={['font']} mode="horizontal">
       <Menu.Item key="index" icon={<HomeOutlined />}>
-          首页
+          <Link className="link" to={`/`}>
+                首页
+          </Link>
+        </Menu.Item>
+        <Menu.Item key="article" icon={<HomeOutlined />}>
+          <Link className="link" to={`/articles`}>
+                文章列表
+          </Link>
         </Menu.Item>
         <SubMenu icon={<RobotOutlined />} title="web">
             <Menu.Item key="setting:1">jquery</Menu.Item>

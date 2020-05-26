@@ -1,0 +1,11 @@
+.article_content{
+    display: flex;
+    width: 80vw;
+    margin: 3vh auto;
+  }
+  .article_list{
+    flex: 7;
+  }
+  .article_aside{
+    flex: 3;
+  }

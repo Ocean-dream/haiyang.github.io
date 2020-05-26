@@ -1279,20 +1279,20 @@ function Index(props){
                 文章
               </Link>
               <Link className="link" to={`/project`}>
-                项目
+                插件
               </Link>
               <Link className="link" to={`/life`}>
                 生活
               </Link>
-              {/* <a
+              <a
                 target="_blank"
                 rel="noopener noreferrer"
                 className="link"
-                href={`https://github.com/biaochenxuying`}
+                href={`https://github.com/Ocean-dream/`}
               >
                 github
               </a>
-              <a
+              {/* <a
                 target="_blank"
                 rel="noopener noreferrer"
                 className="link"

@@ -20,8 +20,8 @@ let config = [
     component: Article,
   },
   {
-    path: '/articleDtail',
-    name:'/articleDtail',
+    path: '/articleDetail',
+    name:'/articleDetail',
     exact:true,
     component: ArticleCon,
   },

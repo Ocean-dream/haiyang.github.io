@@ -2,19 +2,8 @@ import React, { } from 'react'
 import './index.css'
 import { List, Card , Space  } from 'antd';
 import { MessageOutlined, LikeOutlined, StarOutlined } from '@ant-design/icons';
-function ArticleList() {
-
-  const listData = [];
-  for (let i = 0; i < 23; i++) {
-    listData.push({
-      href: 'https://ant.design',
-      title: `ant design part ${i}`,
-      description:
-        'Ant Design, a design language for background applications, is refined by Ant UED Team.',
-      content:
-        'We supply a series of design principles, practical patterns and high quality design resources (Sketch and Axure), to help people create their product prototypes beautifully and efficiently.',
-    });
-  }
+function ArticleList(props) {
+  const listData = props.articleList
 
   const IconText = ({ icon, text }) => (
     <Space>
@@ -32,7 +21,7 @@ function ArticleList() {
       onChange: page => {
         console.log(page);
       },
-      pageSize: 6,
+      pageSize: 3,
     }}
     dataSource={listData}
     renderItem={item => (
@@ -46,10 +35,10 @@ function ArticleList() {
         >
         <Card>
         <List.Item.Meta
-          title={<a href={'/articleDtail'}>{item.title}</a>}
-          description={item.description}
+          title={<a href={`/#/articleDetail?id=${item.id}`}>{item.title}</a>}
+          description={item.introduce}
         />
-        {item.content}
+        {item.introduce}
      </Card>
       </List.Item>
     )}
