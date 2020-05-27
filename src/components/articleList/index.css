@@ -7,3 +7,10 @@
   box-sizing: border-box;
   padding-left: 20px!important;
 }
+.list_admin span{
+  color:#ccc;
+  cursor: pointer;
+}
+.list_admin span:nth-child(2){
+  margin-left:10px;
+}

@@ -1,17 +1,13 @@
 import React, { } from 'react'
 import './index.css'
-import { List, Card , Space  } from 'antd';
-import { MessageOutlined, LikeOutlined, StarOutlined } from '@ant-design/icons';
+import { List, Card } from 'antd';
+import { CarryOutOutlined, LikeOutlined, StarOutlined } from '@ant-design/icons';
 function ArticleList(props) {
   const listData = props.articleList
-
-  const IconText = ({ icon, text }) => (
-    <Space>
-      {React.createElement(icon)}
-      {text}
-    </Space>
-  );
-
+  // const [isAdmire, setIsAdmin] = useState(false)
+  // const handleAdmire = () => {
+  //     setIsAdmin(!isAdmire)
+  //   }
   return (
     <div className="list_wid">
      <List
@@ -21,24 +17,23 @@ function ArticleList(props) {
       onChange: page => {
         console.log(page);
       },
-      pageSize: 3,
+      pageSize: 6,
     }}
     dataSource={listData}
     renderItem={item => (
       <List.Item
       className="list_style"
       key={item.title}
-      actions={[
-          <IconText icon={LikeOutlined} text="156" key="list-vertical-like-o" />,
-          <IconText icon={MessageOutlined} text="2" key="list-vertical-message" />,
-        ]}
         >
         <Card>
         <List.Item.Meta
           title={<a href={`/#/articleDetail?id=${item.id}`}>{item.title}</a>}
           description={item.introduce}
         />
-        {item.introduce}
+       <div className="list_admin">
+         {/* <span onClick={handleAdmire} style={isAdmire==true ? {color:'blue'} : {color: '#ccc'}}><LikeOutlined style={isAdmire==true ? {color:'blue'} : {color: '#ccc'}}/>{item.view_count}</span> */}
+         <span><CarryOutOutlined />{item.addTime}</span>
+       </div>
      </Card>
       </List.Item>
     )}

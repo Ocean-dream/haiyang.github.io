@@ -2,8 +2,9 @@ import React, {  } from 'react'
 import marked from 'marked'
 import hljs from 'highlight.js'
 import {Affix} from 'antd'
-import './index.css'
 import 'highlight.js/styles/monokai-sublime.css'
+// import 'highlight.js/styles/github.css'
+import './index.css'
 // import Tocify from './../tocify.tsx'
 function Detail(props) {
   const markdownData = props.article
@@ -18,6 +19,8 @@ function Detail(props) {
     tables: true,
     breaks: false,
     smartLists: true,
+    smartypants: false,
+    xhtml: false,
     highlight: (code) => {
       return hljs.highlightAuto(code).value
     }
@@ -26,7 +29,7 @@ function Detail(props) {
   //   const anchor = tocify.add(text, level)
   //   return `<a id="${anchor}" href="#${anchor} class="anchor-fix"><h${level}>${text}</h${level}></a>\n`
   // }
-  let html = marked(markdownData)
+  let html = marked(markdownData, {renderer: renderer})
   return (
     <div className='detail_sty'>
        <div className="nav-mulu">

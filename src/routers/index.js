@@ -4,6 +4,7 @@ import React from 'react'
 import Home from '../views/home/index.js'
 import Article from '../views/article/index.js'
 import ArticleCon from '../views/articleDetail/index'
+import Classify from '../views/classify/index'
 
 
 let config = [
@@ -18,6 +19,12 @@ let config = [
     name:'/articles',
     exact:true,
     component: Article,
+  },
+  {
+    path: '/classify',
+    name:'/classify',
+    exact:true,
+    component: Classify,
   },
   {
     path: '/articleDetail',

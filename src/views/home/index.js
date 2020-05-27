@@ -1278,10 +1278,10 @@ function Index(props){
               <Link className="link" to={`/articles`}>
                 文章
               </Link>
-              <Link className="link" to={`/project`}>
+              <Link className="link" to={`/classify?type=9`}>
                 插件
               </Link>
-              <Link className="link" to={`/life`}>
+              <Link className="link" to={`/classify?type=8`}>
                 生活
               </Link>
               <a

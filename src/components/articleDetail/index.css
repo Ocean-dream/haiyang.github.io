@@ -22,11 +22,11 @@
 pre{
     display: block;
     background-color:#f3f3f3;
-     padding: .5rem !important;
+     /* padding: .5rem !important; */
      overflow-y: auto;
      font-weight: 300;
      font-family: Menlo, monospace;
-     border-radius: .3rem;
+     /* border-radius: .3rem; */
 }
 pre{
     background-color: #283646 !important;
@@ -34,7 +34,7 @@ pre{
 pre >code{
     border:0px !important;
     background-color: #283646 !important;
-    color:#FFF;
+    color:pink;
 
 }
 code {
@@ -50,7 +50,7 @@ code {
 
 }
 
-.title-anchor{
+/* .title-anchor{
     color:#888 !important;
     padding:4px !important;
     margin: 0rem !important;
@@ -64,7 +64,7 @@ code {
 }
 .active{
     color:rgb(30, 144, 255) !important;
-}
+} */
 .nav-title{
     text-align: center;
     color: #888;
@@ -75,9 +75,9 @@ code {
     font-size:12px;
 }
 iframe{
-    height: 34rem;
+    /* height: 34rem; */
 }
-.detailed-content  img{
+/* .detailed-content  img{
     width: 100%;
     border:1px solid #f3f3f3;
 }
@@ -89,4 +89,4 @@ iframe{
 }
 .ant-anchor-wrapper{
     padding: 5px !important;
-}
+} */

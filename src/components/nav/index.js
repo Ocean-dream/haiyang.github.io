@@ -5,9 +5,9 @@ import { Link } from 'react-router-dom';
 import { RobotOutlined, ConsoleSqlOutlined, CarOutlined, DeploymentUnitOutlined,HomeOutlined } from '@ant-design/icons';
 
 const { SubMenu } = Menu;
-function Nav() {
+function Nav(props) {
   const handleClick = e => {
-    console.log('click ', e);
+    console.log('click ', e.key);
   };
   return (
     <div className="nav_header">
@@ -32,21 +32,53 @@ function Nav() {
           </Link>
         </Menu.Item>
         <SubMenu icon={<RobotOutlined />} title="web">
-            <Menu.Item key="setting:1">jquery</Menu.Item>
-            <Menu.Item key="setting:2">vue</Menu.Item>
-            <Menu.Item key="setting:3">react</Menu.Item>
-            <Menu.Item key="setting:4">taro</Menu.Item>
+            <Menu.Item key="1">
+              <Link className="link" to={`/classify?type=1`}>
+                  jquery
+              </Link>
+            </Menu.Item>
+            <Menu.Item key="2">
+              <Link className="link" to={`/classify?type=2`}>
+                    vue
+                </Link>
+            </Menu.Item>
+            <Menu.Item key="3">
+              <Link className="link" to={`/classify?type=3`}>
+                    react
+                </Link>
+            </Menu.Item>
+            <Menu.Item key="4">
+              <Link className="link" to={`/classify?type=4`}>
+                    taro
+                </Link>
+            </Menu.Item>
         </SubMenu>
         <SubMenu icon={<ConsoleSqlOutlined />} title="service">
-            <Menu.Item key="setting:5">egg</Menu.Item>
-            <Menu.Item key="setting:6">docker</Menu.Item>
-            <Menu.Item key="setting:7">mysql</Menu.Item>
+            <Menu.Item key="5">
+            <Link className="link" to={`/classify?type=5`}>
+                    egg
+                </Link>
+            </Menu.Item>
+            <Menu.Item key="6">
+            <Link className="link" to={`/classify?type=6`}>
+                    docker
+                </Link>
+            </Menu.Item>
+            <Menu.Item key="7">
+            <Link className="link" to={`/classify?type=7`}>
+                    mysql
+                </Link>
+            </Menu.Item>
         </SubMenu>
-        <Menu.Item key="life" icon={<CarOutlined />}>
-          生活
+        <Menu.Item key="8" icon={<CarOutlined />}>
+          <Link className="link" to={`/classify?type=8`}>
+              生活
+            </Link>
         </Menu.Item>
-        <Menu.Item key="plug" icon={<DeploymentUnitOutlined />}>
-          插件
+        <Menu.Item key="9" icon={<DeploymentUnitOutlined />}>
+            <Link className="link" to={`/classify?type=9`}>
+              插件
+            </Link>
         </Menu.Item>
       </Menu>
       </div>
