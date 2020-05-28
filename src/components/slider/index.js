@@ -7,16 +7,14 @@ import servePath from '../../config/apiUrl'
 const { Meta } = Card;
 
 function Slide() {
-  // const [markData, setMarkData] = useState([])
-  // const getMarkSkill = async() => {
-  //   const {data: res} = await axios.get(servePath.getSkillContent)
-  //   console.log(res)
-  //   setMarkData(res.data)
-  // }
-  // useEffect(() => {
-  //   getMarkSkill()
-  // }, [])
-  const markData = [{"id":1,"skill_name":"vue全家桶","mark_style":"success"},{"id":2,"skill_name":"react-hook","mark_style":"processing"},{"id":3,"skill_name":"redux","mark_style":"warning"},{"id":4,"skill_name":"d3.js","mark_style":"error"}]
+  const [markData, setMarkData] = useState([])
+  const getMarkSkill = async() => {
+    const {data: res} = await axios.get(servePath.getSkillContent)
+    setMarkData(res.data)
+  }
+  useEffect(() => {
+    getMarkSkill()
+  }, [])
   return (
     <div>
       <Card
