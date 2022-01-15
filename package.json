@@ -11,7 +11,7 @@
     "connected-react-router": "^6.8.0",
     "highlight.js": "^10.0.3",
     "lodash": "^4.17.15",
-    "marked": "^1.1.0",
+    "marked": "^4.0.10",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-router": "^5.2.0",
